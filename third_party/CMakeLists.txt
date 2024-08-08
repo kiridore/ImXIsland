@@ -1,12 +1,12 @@
 include_directories(.)
 # curl
-add_subdirectory(./curl/)
 set(BUILD_CURL_EXE OFF)
 set(BUILD_TESTING OFF)
 set(BUILD_EXAMPLES OFF)
 set(BUILD_STATIC_LIBS OFF)
 set(BUILD_MISC_DOCS OFF)
 set(ENABLE_CURL_MANUAL OFF)
+add_subdirectory(./curl/)
 
 # glfw
 add_subdirectory(glfw)
@@ -36,3 +36,7 @@ target_include_directories(imgui PUBLIC
 
 target_link_libraries(imgui ${OPENGL_LIBRARIES} glfw)
 
+#json
+set(JSON_BuildTests OFF CACHE INTERNAL "")
+set(JSON_Install OFF CACHE INTERNAL "")
+add_subdirectory(./json/)
