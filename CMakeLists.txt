@@ -24,6 +24,5 @@ configure_file(
     ${CMAKE_SOURCE_DIR}/cmake/version.h.in
     ${CMAKE_SOURCE_DIR}/src/version.h
 )
-
 add_subdirectory(./third_party/)
 add_subdirectory(./src/)
